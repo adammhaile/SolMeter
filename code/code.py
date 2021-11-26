@@ -89,6 +89,8 @@ while True:
             last_remaining_update = time.monotonic()
         hide_rem_time_icon = ((time.monotonic() % 1) >= 0.5)
         ui.bmp_rem_time.hidden = hide_rem_time_icon
+    else:
+        ui.bmp_rem_time.hidden = False
     
     # always show this so we see the previous hit value
     ui.uv_val.text = str(uv.TotalExposure())
